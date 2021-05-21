@@ -14,12 +14,8 @@ def connect():
     os.environ['LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN'] = '1'
     session = boto3.Session(profile_name='default')
     client = session.client('rds')
-
-    token = client.generate_db_auth_token(DBHostname=ENDPOINT, Port=PORT, DBUsername=USR, Region=REGION)
-
     try:
-        conn = mysql.connector.connect(host=ENDPOINT, user=USR, passwd=token, port=PORT, database=DBNAME,
-                                       ssl_ca='[full path]rds-combined-ca-bundle.pem')
+        conn = mysql.connector.connect(host=ENDPOINT, user=USR, passwd='xvalentavr', port=PORT, database=DBNAME)
     except Error as e:
         print('Error:', e)
 
