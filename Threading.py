@@ -36,5 +36,5 @@ def main(urls):
 
 
 if __name__ == "__main__":
-    urls = ['.com', '.org', '.biz', '.net', '.info']
+    urls = ['.com', '.org','.net', '.info']
     main(urls)
