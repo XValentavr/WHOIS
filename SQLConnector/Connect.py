@@ -1,6 +1,6 @@
 import mysql
 from mysql.connector import MySQLConnection, Error
-import PyMySQL
+import pymysql
 
 
 def connect():
