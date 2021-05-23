@@ -8,7 +8,7 @@ LENGTH = 5
 
 def create_alhpabet():
     alphabet_string = string.ascii_uppercase
-    alphabet_list = list(alphabet_string)
+    alphabet_list = list(alphabet_string.lower())
     return alphabet_list
 
 
@@ -18,7 +18,6 @@ def create_domain(url):
     for chars in product(mylist, repeat=LENGTH):
         var = ''.join(chars)
         domain = var + url
-        print(domain)
         is_available(domain, url, var, conn)
 
     return None
