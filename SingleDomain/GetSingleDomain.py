@@ -16,4 +16,4 @@ def get_single(name, dots, str, conn):
                     cursor.executemany(query, list_domain)
                     conn.commit()
     except whois.parser.PywhoisError:
-        print('1')
+        print(name)
