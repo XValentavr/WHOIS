@@ -1,4 +1,4 @@
-from SQLConnector.Connect import connect
+from SQLConnector.EC2Connector import connect
 
 
 def get_net():
