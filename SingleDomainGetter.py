@@ -1,4 +1,4 @@
-from GetNetDomains import get_net
+from SingleDomain.GetNetDomains import get_net
 from SQLConnector.EC2Connector import connect
 from SingleDomain.GetSingleDomain import get_single
 
