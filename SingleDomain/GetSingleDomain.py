@@ -11,7 +11,7 @@ def get_single(name, dots, str, conn):
             if key == "status":
                 if av_domain[key] != CHECKER:
                     list_domain = [(str, dots)]
-                    query = "INSERT INTO com_zone (DomainName,ZoneOfDomain) VALUES(%s,%s)"
+                    query = "INSERT INTO org_zone (DomainName,ZoneOfDomain) VALUES(%s,%s)"
                     cursor = conn.cursor()
                     cursor.executemany(query, list_domain)
                     conn.commit()
