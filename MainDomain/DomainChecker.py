@@ -1,9 +1,20 @@
+"""
+This module get status of domain and write it to database
+"""
+# standart imports
 import whois
 
 CHECKER = None
 
 
-def is_available(name, dots, str, conn):
+def is_available(name: str, dots: str, str: str, conn):
+    """
+    get domain from alphabet
+    :param name: str
+    :param dots: str
+    :param str: str
+    :param conn: database connection
+    """
     try:
         av_domain = whois.whois(f"{name}")
         for key in av_domain.keys():
@@ -16,4 +27,4 @@ def is_available(name, dots, str, conn):
                     cursor.executemany(query, list_domain)
                     conn.commit()
     except whois.parser.PywhoisError:
-        print('1')
+        print('An error occured')
